@@ -19,7 +19,6 @@ requirements:
   host:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}
     - pip
     - python >=3.5
   run:
