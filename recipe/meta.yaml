@@ -14,6 +14,7 @@ build:
   entry_points:
     - parmed = parmed.scripts:clapp
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  skip: true  # [win and vc<14]
 
 requirements:
   host:
@@ -22,7 +23,7 @@ requirements:
     - pip
     - python
   run:
-    - numpy
+    - numpy >=1.14
     - pandas
     - python
 
