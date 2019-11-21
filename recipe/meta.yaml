@@ -11,6 +11,7 @@ source:
 
 build:
   number: 2
+  skip: true  # [vc<14]
   entry_points:
     - parmed = parmed.scripts:clapp
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
@@ -20,11 +21,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - pip
-    - python >=3.5
+    - python
   run:
     - numpy >=1.14
     - pandas
-    - python >=3.5
+    - python
 
 test:
   imports:
