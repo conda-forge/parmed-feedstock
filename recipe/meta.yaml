@@ -15,7 +15,6 @@ build:
     - parmed = parmed.scripts:clapp
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
   skip: True  # [win and vc<14]
-  skip: True  # [py<37] 
 
 requirements:
   host:
