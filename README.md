@@ -244,6 +244,7 @@ Feedstock Maintainers
 =====================
 
 * [@chrisbarnettster](https://github.com/chrisbarnettster/)
+* [@jaimergp](https://github.com/jaimergp/)
 * [@simonbray](https://github.com/simonbray/)
 * [@tsenapathi](https://github.com/tsenapathi/)
 
