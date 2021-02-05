@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: "e5304b2e71b11333cf694d65e216d1b144311e3b264ad2dce89cefb27848b890"
+  sha256: "42e031683f0ba63d70300306017b6eb882e4f0a2098034b78b4640360f8dd6c4"
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - parmed = parmed.scripts:clapp
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
