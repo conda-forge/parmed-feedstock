@@ -1,5 +1,5 @@
 {% set name = "ParmEd" %}
-{% set version = "3.3.0" %}
+{% set version = "3.4.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: "e28b301e7f72d9bd7760dd00172566dd262a7b2ee7ba92c3ed1887e8cf31618b"
+  sha256: "42e031683f0ba63d70300306017b6eb882e4f0a2098034b78b4640360f8dd6c4"
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - parmed = parmed.scripts:clapp
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
