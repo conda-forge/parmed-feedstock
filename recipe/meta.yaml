@@ -10,7 +10,7 @@ source:
   sha256: bc2ecaaf604492c96ced60440c13798e18087b2777d634b383b179dc05bdf8cc
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - parmed = parmed.scripts:clapp
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
@@ -26,6 +26,7 @@ requirements:
     - numpy >=1.14
     - pandas
     - python
+    - openmm <7.6
 
 test:
   imports:
