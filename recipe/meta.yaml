@@ -1,5 +1,5 @@
 {% set name = "ParmEd" %}
-{% set version = "3.4.3" %}
+{% set version = "3.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: a4ff4a20141578e1e54430133de499a3b1117b5c43898636c1f2e77c7172a79e
+  sha256: 3e2d11d0e43238579a47e425aa2b0cb4d32807cf068c5137ca0ba14942b4cfb8
 
 build:
   number: 1
