@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: a4ff4a20141578e1e54430133de499a3b1117b5c43898636c1f2e77c7172a79e
+  sha256: 8f91bf9054ef6a8a433560a8265b476251acfa4bc942f128986290e3cd8631e6
 
 build:
   number: 2
@@ -56,13 +56,17 @@ test:
 
 about:
   home: https://parmed.github.io/ParmEd/html/index.html
-  license: LGPL (or GPL if released with AmberTools)
+  license: LGPL-2.1-or-later
   license_family: LGPL
   license_file: LICENSE
   summary: Amber parameter file editor
   doc_url: https://parmed.github.io/ParmEd/html/index.html
   description: |
-    ParmEd is a package designed to facilitate creating and easily manipulating molecular systems that are fully described by a common classical force field. Supported force fields include Amber, CHARMM, AMOEBA, and several others that share a similar functional form (e.g., GROMOS).
+    ParmEd is a package designed to facilitate creating and easily 
+    manipulating molecular systems that are fully described by a 
+    common classical force field. Supported force fields include 
+    Amber, CHARMM, AMOEBA, and several others that share a similar 
+    functional form (e.g., GROMOS).
 
 extra:
   recipe-maintainers:
