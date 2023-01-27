@@ -1,5 +1,5 @@
 {% set name = "ParmEd" %}
-{% set version = "3.4.4" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 435583d6e036d69e0c6b2b6854e8495ced7bca304e08e681a2bdd45339645e60
+  sha256: f0f2a02b84c2edc82b99d8a61b1f2974023aefd0b2962da0b3a0d68c5a222b44
 
 build:
   number: 0
@@ -46,7 +46,6 @@ test:
     - parmed.rosetta
     - parmed.tinker
     - parmed.tools
-    - parmed.tools.gui
     - parmed.tools.simulations
     - parmed.unit
     - parmed.utils
