@@ -46,7 +46,6 @@ test:
     - parmed.rosetta
     - parmed.tinker
     - parmed.tools
-    - parmed.tools.gui
     - parmed.tools.simulations
     - parmed.unit
     - parmed.utils
