@@ -1,11 +1,11 @@
-About parmed
-============
+About parmed-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parmed-feedstock/blob/main/LICENSE.txt)
 
 Home: https://parmed.github.io/ParmEd/html/index.html
 
 Package license: LGPL-2.1-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parmed-feedstock/blob/main/LICENSE.txt)
 
 Summary: Amber parameter file editor
 
