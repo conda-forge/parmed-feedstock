@@ -10,7 +10,7 @@ source:
   sha256: cc1675c748cddcf7fe2929c8237f9ea461a466de550a087ebef329fb1f34335b
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - parmed = parmed.scripts:clapp
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
