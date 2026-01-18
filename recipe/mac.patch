@@ -1,0 +1,25 @@
+From be09c7ebb6586839bd5a51252a30408b2f2e26e6 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Sun, 18 Jan 2026 13:22:01 +0100
+Subject: [PATCH] Comment out compiler environment variable settings
+
+Comment out environment variable settings for C++ and C compilers.
+---
+ setup.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index 01f68c7fe..16c94e826 100644
+--- a/setup.py
++++ b/setup.py
+@@ -27,8 +27,8 @@ def prepare_env_for_osx():
+         '19': '10.15',
+         '20': '11.5',
+     }
+-    os.environ['CXX'] = 'clang++'
+-    os.environ['CC'] = 'clang'
++    # os.environ['CXX'] = 'clang++'
++    # os.environ['CC'] = 'clang'
+     darwin_major = os.uname()[2].split('.')[0]
+     if darwin_major in darwin_major_to_osx_map:
+         os.environ['MACOSX_DEPLOYMENT_TARGET'] = darwin_major_to_osx_map[darwin_major]
