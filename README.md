@@ -376,6 +376,7 @@ Feedstock Maintainers
 
 * [@chrisbarnettster](https://github.com/chrisbarnettster/)
 * [@jaimergp](https://github.com/jaimergp/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 * [@simonbray](https://github.com/simonbray/)
 * [@swails](https://github.com/swails/)
 * [@tsenapathi](https://github.com/tsenapathi/)
