@@ -1,0 +1,90 @@
+schema_version: 1
+
+context:
+  name: ParmEd
+  version: "4.3.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/${{ name }}/${{ name }}/archive/${{ version }}.tar.gz
+  sha256: 00992defbe59e0268fbc3587db384dbb63de06c04adce60fbfee9fdd316f5cc4
+  patches:
+    - if: osx
+      then: mac.patch
+
+build:
+  number: 1
+  skip: win and vc<14
+  script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+  python:
+    entry_points:
+      - parmed = parmed.scripts:clapp
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+  host:
+    - ${{ compiler('c') }}
+    - ${{ compiler('cxx') }}
+    - pip
+    - setuptools
+    - python
+  run:
+    - numpy >=1.14
+    - pandas
+    - python
+
+tests:
+  - python:
+      imports:
+        - parmed
+        - parmed.amber
+        - parmed.amber.mdin
+        - parmed.charmm
+        - parmed.formats
+        - parmed.formats.pdbx
+        - parmed.gromacs
+        - parmed.modeller
+        - parmed.namd
+        - parmed.openmm
+        - parmed.rdkit
+        - parmed.rosetta
+        - parmed.tinker
+        - parmed.tools
+        - parmed.tools.simulations
+        - parmed.unit
+        - parmed.utils
+        - parmed.utils.fortranformat
+      pip_check: false
+  - script:
+      - parmed --help
+
+about:
+  license: LGPL-2.1-or-later
+  license_file: LICENSE
+  summary: Amber parameter file editor
+  description: |
+    ParmEd is a package designed to facilitate creating and easily
+    manipulating molecular systems that are fully described by a
+    common classical force field. Supported force fields include
+    Amber, CHARMM, AMOEBA, and several others that share a similar
+    functional form (e.g., GROMOS).
+
+
+  homepage: https://parmed.github.io/ParmEd/html/index.html
+  documentation: https://parmed.github.io/ParmEd/html/index.html
+
+extra:
+  recipe-maintainers:
+    - chrisbarnettster
+    - simonbray
+    - tsenapathi
+    - jaimergp
+    - swails
+    - jan-janssen
