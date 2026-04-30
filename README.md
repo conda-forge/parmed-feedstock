@@ -17,7 +17,6 @@ common classical force field. Supported force fields include
 Amber, CHARMM, AMOEBA, and several others that share a similar
 functional form (e.g., GROMOS).
 
-
 Current build status
 ====================
 
